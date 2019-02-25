@@ -19,8 +19,6 @@ from scrapy.http import Request
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
 
-from patent_util import PatentUtil
-
 
 class DuplicatesPipeline(object):
     """ Cleanse data of any duplicates """ 
