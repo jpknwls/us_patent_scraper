@@ -18,7 +18,7 @@ class USPatent(CrawlSpider):
     response_url = ""
     
     # all search terms for us patent search are saved in .txt file.
-    f = open("us_patent_urls.txt")
+    f = open("patent_spider/spiders/us_patent_urls.txt")
     #f = open("test.txt")
     start_urls = [url.strip() for url in f.readlines()]
     f.close()
