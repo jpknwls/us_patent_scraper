@@ -62,7 +62,7 @@ class USPatent(CrawlSpider):
         titletags_list = []
         trtags_list = []
               
-        webpage = urllib2.urlopen(response.url)
+        webpage = urllib2.requests.urlopen(response.url)
         
         #Beautiful soup outputs data as lists
         #These lists must be converted to strings using the "".join(list) function
