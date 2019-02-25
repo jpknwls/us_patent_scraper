@@ -3,11 +3,11 @@
 
 import re
 
-import urllib2
+import urllib as urllib2
 from bs4 import BeautifulSoup
 
 from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector
 
 from patent_spider.items import PatentSpiderItem
@@ -25,7 +25,7 @@ class USPatent(CrawlSpider):
     
     rules = (
         Rule (
-            SgmlLinkExtractor(
+            LinkExtractor(
                 allow=("http://patft.uspto.gov/netacgi/.*", ),),
             callback="parse_items",
             process_links="filter_links",
