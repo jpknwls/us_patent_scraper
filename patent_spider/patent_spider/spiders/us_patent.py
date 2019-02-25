@@ -311,7 +311,7 @@ class USPatent(CrawlSpider):
             end_pos   = text.find(")", start_pos)
             
             # If there is a comma, try to find one closest to ")"
-            if (start_pos<>loc):
+            if (start_pos!=loc):
                 start_pos= text.rfind(",", loc, end_pos)
             
             if (start_pos >=0 and end_pos >=0):
